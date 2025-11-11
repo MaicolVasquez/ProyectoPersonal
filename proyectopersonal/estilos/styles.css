@@ -1,0 +1,51 @@
+header {
+  padding: 10px 40px;
+  gap:16px;
+  justify-content:space-between;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  color: #fbfbfb;
+  margin: 0;
+  font-weight:700
+}
+
+.menu a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  color: #0ff;
+}
+
+.Bienvenido {
+    padding: 0px 40px;
+    color:white;
+}
+body,html{
+    font-family: 'Orbitron',sans-serif;
+    background-color: rgb(14, 4, 23);
+    color:white;
+}
+
+nav ul {
+  display:flex;
+  gap:18px;
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+}

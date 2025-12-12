@@ -3,8 +3,7 @@ html,body{
     color:white;
     font-family: 'Orbitron',sans-serif;
     display: grid;
-    height: 100%; 
-    flex-direction: column; 
+    height: 100%;  
     grid-template-rows: auto 1fr auto;
 }
 header{

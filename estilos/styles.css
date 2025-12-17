@@ -97,21 +97,17 @@ footer{
 .card-info h3{
   color: #b56aff;
 }
-/* --- ESTILOS PARA RECOMENDACIONES --- */
-
-/* Contenedor principal dividido en 2 */
 .rec-container {
     display: flex;
     max-width: 1200px;
     margin: 40px auto;
-    background-color: rgba(61, 0, 90, 0.3); /* Fondo semitransparente morado */
+    background-color: rgba(61, 0, 90, 0.3);
     border: 2px solid #3d005a;
     border-radius: 15px;
-    overflow: hidden; /* Para que la imagen no se salga de las esquinas */
+    overflow: hidden; 
     box-shadow: 0 0 20px rgba(181, 106, 255, 0.1);
 }
 
-/* Columna Izquierda (Formulario) */
 .rec-form-wrapper {
     flex: 1;
     padding: 40px;
@@ -129,7 +125,6 @@ footer{
     font-size: 14px;
 }
 
-/* Inputs y Labels */
 .input-group {
     margin-bottom: 20px;
 }
@@ -146,13 +141,13 @@ footer{
 .input-group textarea {
     width: 100%;
     padding: 12px;
-    background-color: rgb(24, 10, 35); /* Más oscuro que el fondo */
+    background-color: rgb(24, 10, 35);
     border: 1px solid #3d005a;
     border-radius: 8px;
     color: white;
     font-family: 'Orbitron', sans-serif;
     outline: none;
-    box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+    box-sizing: border-box;
 }
 
 .input-group input:focus,
@@ -161,7 +156,6 @@ footer{
     box-shadow: 0 0 8px rgba(181, 106, 255, 0.4);
 }
 
-/* Botón Enviar */
 .btn-enviar {
     width: 100%;
     padding: 15px;
@@ -181,19 +175,17 @@ footer{
     box-shadow: 0 0 15px #ff00cc;
 }
 
-/* Mensaje de error */
 .error-text {
     color: #ff4d4d;
     font-size: 12px;
     margin-bottom: 15px;
-    display: none; /* Oculto por defecto */
+    display: none; 
     background-color: rgba(255, 0, 0, 0.1);
     padding: 10px;
     border-radius: 5px;
     border-left: 3px solid #ff4d4d;
 }
 
-/* Columna Derecha (Info visual) */
 .rec-info-wrapper {
     flex: 1;
     background-color: rgb(24, 10, 35);
@@ -245,14 +237,13 @@ footer{
     top: -5px;
 }
 
-/* Responsive para celulares/tablets */
 @media (max-width: 900px) {
     .rec-container {
-        flex-direction: column; /* Apilar uno sobre otro */
+        flex-direction: column;
         margin: 20px;
     }
     
     .rec-info-wrapper {
-        order: -1; /* Poner la imagen arriba en móviles si quieres, o quita esta línea */
+        order: -1;
     }
 }

@@ -247,3 +247,70 @@ footer{
         order: -1;
     }
 }
+/* --- ESTILOS PARA LAS TARJETAS DE JUEGOS (MIS JUEGOS) --- */
+
+/* Estilo base de la tarjeta */
+.card {
+    background-color: rgba(30, 10, 45, 0.6); /* Fondo oscuro semitransparente */
+    border: 2px solid #3d005a;               /* Borde oscuro inicial */
+    border-radius: 15px;                     /* Bordes redondeados */
+    padding: 15px;
+    transition: all 0.4s ease;               /* Suavizado para la animación */
+    position: relative;
+    overflow: hidden;                        /* Para contener el brillo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* EFECTO AL PASAR EL MOUSE (HOVER) */
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Se levanta y crece un poco */
+    border-color: #b56aff;                    /* El borde se vuelve brillante */
+    box-shadow: 0 0 20px rgba(181, 106, 255, 0.4), /* Brillo exterior */
+                inset 0 0 20px rgba(181, 106, 255, 0.1); /* Brillo interior */
+    background-color: rgba(61, 0, 90, 0.5);   /* El fondo se aclara ligeramente */
+    z-index: 10;                              /* Asegura que quede por encima */
+}
+
+/* Mejora para las etiquetas (tags) */
+.tags {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #3d005a;
+    color: #c1bcc6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: 'Orbitron', sans-serif;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+/* Las etiquetas también brillan al tocar la tarjeta */
+.card:hover .tag {
+    border-color: #ff00cc;
+    color: #fff;
+    box-shadow: 0 0 5px #ff00cc;
+}
+
+/* Ajuste de la imagen para que encaje perfecto en la tarjeta */
+.card-img {
+    width: 100%;       /* Ocupa todo el ancho disponible */
+    height: 180px;     /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    border: none;      /* Quitamos el borde antiguo de la imagen */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+/* Efecto extra: la imagen se acerca un poco */
+.card:hover .card-img {
+    transform: scale(1.05);
+}

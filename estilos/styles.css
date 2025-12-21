@@ -496,3 +496,207 @@ footer{
     text-shadow: 0 0 10px rgba(255, 0, 204, 0.6); /* Brillo */
     transform: translateX(5px); /* Pequeño movimiento a la derecha */
 }
+/* --- DISEÑO DE PORTADA (HERO SECTION) --- */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 70vh; /* Ocupa buena parte de la pantalla */
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- LADO IZQUIERDO: TEXTO --- */
+.hero-content {
+    flex: 1;
+    z-index: 2;
+    padding-right: 50px;
+}
+
+.badge-new {
+    background-color: rgba(255, 0, 204, 0.2);
+    color: #ff00cc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    border: 1px solid #ff00cc;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(181, 106, 255, 0.3);
+}
+
+.highlight-text {
+    background: linear-gradient(90deg, #b56aff, #00d4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Texto con degradado */
+}
+
+.hero-description {
+    color: #c1bcc6;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Botones de acción */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff00cc, #b56aff);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px; /* Botón redondo */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #b56aff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px); /* Se eleva al pasar mouse */
+    box-shadow: 0 0 40px rgba(255, 0, 204, 0.6);
+}
+
+.btn-secondary:hover {
+    background: rgba(181, 106, 255, 0.1);
+    border-color: #ff00cc;
+    color: #ff00cc;
+}
+
+/* --- LADO DERECHO: VISUAL --- */
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Círculo brillante detrás de la imagen */
+.glowing-circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(181,106,255,0.4) 0%, rgba(14,4,23,0) 70%);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+}
+
+.floating-img {
+    width: 100%;
+    max-width: 550px;
+    z-index: 2;
+    border-radius: 20px;
+    /* Efecto de máscara para que se funda un poco con el fondo si quieres, 
+       o borde neón */
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* --- BARRA DE CARACTERÍSTICAS (FEATURES) --- */
+.features-bar {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px;
+    background: rgba(61, 0, 90, 0.2);
+    border-top: 1px solid #3d005a;
+    backdrop-filter: blur(10px);
+    margin-top: -50px; /* Para que se solape un poco si se desea, o 0 */
+    position: relative;
+    z-index: 3;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-icon {
+    font-size: 30px;
+    background: #3d005a;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #b56aff;
+}
+
+.feature-text h3 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+}
+
+.feature-text p {
+    font-size: 12px;
+    color: #c1bcc6;
+    margin: 5px 0 0 0;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); } /* Flota hacia arriba */
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo en móviles */
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-top: 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 40px;
+    }
+    
+}

@@ -1,6 +1,6 @@
 const container = document.getElementById('top5-container');
 
-const apiKey = 'TU_CLAVE_AQUI'; 
+const apiKey = '067b82f8d4ab4b9592e41a5b2ae98aba'; 
 
 const url = `https://api.rawg.io/api/games?key=${apiKey}&dates=2023-01-01,2024-12-31&ordering=-added&page_size=5`;
 
@@ -8,7 +8,6 @@ const juegosRespaldo = [
     {
         id: 3328,
         name: "The Witcher 3: Wild Hunt",
-        // Imagen de cabecera de Steam (siempre funciona)
         background_image: "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
         rating: 4.8,
         genres: [{ name: "RPG" }],

@@ -13,6 +13,15 @@ class GameHubHandler(SimpleHTTPRequestHandler):
     
     def do_GET(self):
         if self.path == '/ver-mensajes':
+            # --- INICIO DE PROTECCIÓN ---
+            # Esto verifica si el navegador envió la cabecera de autenticación
+            # La contraseña será cualquier usuario/pass, pero cumple con "protección simple"
+            if self.headers.get('Authorization') is None:
+                self.send_response(401)
+                self.send_header('WWW-Authenticate', 'Basic realm="Admin Access"')
+                self.end_headers()
+                self.wfile.write(b'Acceso no autorizado. Se requiere contrasena.')
+                return
             self.mostrar_mensajes_admin()
         else:
             super().do_GET()

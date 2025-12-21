@@ -29,7 +29,7 @@ document.getElementById('formContacto').addEventListener('submit', function(even
         })
         .then(res => {
             if (res.ok) {
-                alert(`¡Gracias ${nombre}! Mensaje guardado.`);
+                alert(`¡Gracias ${nombre}! Mensaje guardado en Base de Datos.`);
                 document.getElementById('formContacto').reset();
             } else {
                 throw new Error("Error del servidor");

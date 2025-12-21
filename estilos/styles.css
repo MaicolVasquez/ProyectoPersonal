@@ -713,3 +713,10 @@ footer{
 .logo span {
     color: #9d50ff; /* "Hub" será Morado (Color exacto de tu imagen) */
 }
+/* --- ESTILO PARA LA SECCIÓN ACTIVA (HEADER) --- */
+nav ul li a.active {
+    color: #ffffff; /* Texto blanco puro */
+    text-shadow: 0 0 15px #b56aff; /* Resplandor morado intenso */
+    border-bottom: 2px solid #ff00cc; /* Línea rosa neón abajo */
+    padding-bottom: 5px; /* Espacio para que la línea no pegue con el texto */
+}

@@ -700,3 +700,16 @@ footer{
     }
     
 }
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff; /* "Game" será Blanco puro */
+    /* Quitamos el background y el text-fill-color antiguos para que no interfieran */
+    background: none; 
+    -webkit-text-fill-color: initial;
+}
+
+.logo span {
+    color: #9d50ff; /* "Hub" será Morado (Color exacto de tu imagen) */
+}

@@ -1,0 +1,483 @@
+html,body{
+    background-color: rgb(14, 4, 23);
+    color:white;
+    font-family: 'Orbitron',sans-serif;
+    display: grid;
+    height: 100%;  
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    border-bottom: 2px solid #3d005a;
+    box-shadow: 0 2px 10px rgba(180, 0, 255, 0.3);
+    align-items: center;
+    background-color: rgb(14, 4, 23);
+}
+nav ul{
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+.logo {
+  font-size: 28px;
+  color: #b56aff;
+  margin: 0;
+  font-weight:700
+}
+nav ul li a{
+  color: #c1bcc6;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #b56aff;
+  text-shadow: 0 0 10px #b56aff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.bienv{
+  font-size: 80px;
+}
+.text-bienv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  margin: 35px;
+}
+.imagenbv{
+    width: 400px;
+}
+main {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+footer{
+  background-color: rgb(14, 4, 23);
+  color: #b56aff;
+  text-align: center;
+  border-top: 2px solid #3d005a;
+  box-shadow: 0 -2px 10px rgba(180, 0, 255, 0.3);
+  padding: 15px 0;
+}
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+.card-img{
+  width:350px;
+  border: 5px solid #3d005a;
+  border-radius: 8px;
+}
+.card-info h3{
+  color: #b56aff;
+}
+.rec-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: rgba(61, 0, 90, 0.3);
+    border: 2px solid #3d005a;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(181, 106, 255, 0.1);
+}
+
+.rec-form-wrapper {
+    flex: 1;
+    padding: 40px;
+}
+
+.rec-title {
+    color: #b56aff;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.rec-subtitle {
+    color: #c1bcc6;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(24, 10, 35);
+    border: 1px solid #3d005a;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #b56aff;
+    box-shadow: 0 0 8px rgba(181, 106, 255, 0.4);
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #b56aff, #ff00cc);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #ff00cc;
+}
+
+.error-text {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-bottom: 15px;
+    display: none; 
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #ff4d4d;
+}
+
+.rec-info-wrapper {
+    flex: 1;
+    background-color: rgb(24, 10, 35);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-image-container {
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+}
+
+.info-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.info-text-content {
+    padding: 40px;
+    color: #c1bcc6;
+}
+
+.info-text-content h3 {
+    color: #b56aff;
+    margin-bottom: 20px;
+}
+
+.reasons-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reasons-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.reasons-list li::before {
+    content: "•";
+    color: #ff00cc;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+@media (max-width: 900px) {
+    .rec-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .rec-info-wrapper {
+        order: -1;
+    }
+}
+/* --- ESTILOS PARA LAS TARJETAS DE JUEGOS (MIS JUEGOS) --- */
+
+/* Estilo base de la tarjeta */
+.card {
+    background-color: rgba(30, 10, 45, 0.6); /* Fondo oscuro semitransparente */
+    border: 2px solid #3d005a;               /* Borde oscuro inicial */
+    border-radius: 15px;                     /* Bordes redondeados */
+    padding: 15px;
+    transition: all 0.4s ease;               /* Suavizado para la animación */
+    position: relative;
+    overflow: hidden;                        /* Para contener el brillo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* EFECTO AL PASAR EL MOUSE (HOVER) */
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Se levanta y crece un poco */
+    border-color: #b56aff;                    /* El borde se vuelve brillante */
+    box-shadow: 0 0 20px rgba(181, 106, 255, 0.4), /* Brillo exterior */
+                inset 0 0 20px rgba(181, 106, 255, 0.1); /* Brillo interior */
+    background-color: rgba(61, 0, 90, 0.5);   /* El fondo se aclara ligeramente */
+    z-index: 10;                              /* Asegura que quede por encima */
+}
+
+/* Mejora para las etiquetas (tags) */
+.tags {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #3d005a;
+    color: #c1bcc6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: 'Orbitron', sans-serif;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+/* Las etiquetas también brillan al tocar la tarjeta */
+.card:hover .tag {
+    border-color: #ff00cc;
+    color: #fff;
+    box-shadow: 0 0 5px #ff00cc;
+}
+
+/* Ajuste de la imagen para que encaje perfecto en la tarjeta */
+.card-img {
+    width: 100%;       /* Ocupa todo el ancho disponible */
+    height: 180px;     /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    border: none;      /* Quitamos el borde antiguo de la imagen */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+/* Efecto extra: la imagen se acerca un poco */
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+/* --- ESTILOS EXCLUSIVOS PARA TOP 5 (Diseño Horizontal) --- */
+
+.top-header {
+    padding: 40px 20px 20px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.top-title {
+    color: #ffcc00; /* Amarillo/Dorado como en la imagen */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.top-subtitle {
+    color: #c1bcc6;
+    font-size: 16px;
+}
+
+.top-list-container {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Tarjeta contenedora horizontal */
+.top-card {
+    display: flex; /* Esto hace que imagen y texto estén lado a lado */
+    background-color: rgba(30, 10, 45, 0.8);
+    border: 1px solid #5a2d85;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 300px; /* Altura fija para uniformidad */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(181, 106, 255, 0.2);
+    border-color: #b56aff;
+}
+
+/* Sección Izquierda: Imagen y Círculo */
+.img-container {
+    width: 45%; /* La imagen ocupa el 45% del ancho */
+    position: relative;
+    overflow: hidden;
+}
+
+.top-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin estirarse */
+    transition: transform 0.5s ease;
+}
+
+.top-card:hover .top-img {
+    transform: scale(1.05);
+}
+
+/* El círculo del ranking */
+.rank-circle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffaa00, #ff6600); /* Naranja degradado */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Colores específicos para 1, 2 y 3 */
+.rank-circle.silver { background: linear-gradient(135deg, #e0e0e0, #999); color: #333; }
+.rank-circle.bronze { background: linear-gradient(135deg, #cd7f32, #8b4513); }
+
+/* Sección Derecha: Contenido */
+.content-container {
+    width: 55%; /* El texto ocupa el resto */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
+}
+
+.info-top h3 {
+    font-size: 26px;
+    margin: 0 0 15px 0;
+    color: white;
+}
+
+.meta-tags {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.genre-pill {
+    background-color: #3d005a;
+    color: #b56aff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #5a2d85;
+}
+
+.rating {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.desc {
+    color: #c1bcc6;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botón grande degradado */
+.btn-more {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(90deg, #b56aff, #ff00cc); /* Degradado rosa/morado */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: filter 0.3s ease;
+}
+
+.btn-more:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+}
+
+/* RESPONSIVE: Para celulares */
+@media (max-width: 768px) {
+    .top-card {
+        flex-direction: column; /* Cambia a vertical en celulares */
+        height: auto;
+    }
+    .img-container, .content-container {
+        width: 100%;
+    }
+    .img-container {
+        height: 200px;
+    }
+}

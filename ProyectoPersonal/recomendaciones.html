@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">GAMEHUB</h1>
+        <nav>
+            <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="misjuegos.html">MIS JUEGOS</a></li>
+            <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
+            <li><a href="top5.html">TOP 5</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+<div class="rec-container">
+            <div class="rec-form-wrapper">
+                <h2 class="rec-title">Envía tu Recomendación</h2>
+                <p class="rec-subtitle">Comparte tus juegos favoritos con la comunidad</p>
+                
+                <form id="formRecomendacion" class="rec-form">
+                    <div class="input-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="juego">Nombre del Juego</label>
+                        <input type="text" id="juego" placeholder="Ej: The Witcher 3">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="genero">Género</label>
+                        <select id="genero">
+                            <option value="">Selecciona un género</option>
+                            <option value="accion">Acción / Aventura</option>
+                            <option value="rpg">RPG</option>
+                            <option value="shooter">Shooter</option>
+                            <option value="estrategia">Estrategia</option>
+                            <option value="deportes">Deportes</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="4" placeholder="Cuéntanos por qué recomiendas este juego..."></textarea>
+                    </div>
+                    
+                    <p id="errorMsg" class="error-text"></p>
+
+                    <button type="submit" class="btn-enviar">Enviar Recomendación</button>
+                </form>
+            </div>
+
+            <div class="rec-info-wrapper">
+                <div class="info-image-container">
+                    <img src="https://noti-america.com/site/principal/wp-content/uploads/sites/26/2024/01/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca-scaled.jpg" alt="Gaming Setup" class="info-img">
+                    <div class="overlay-text">GAMING</div>
+                </div>
+                
+                <div class="info-text-content">
+                    <h3>¿Por qué recomendar?</h3>
+                    <ul class="reasons-list">
+                        <li>Ayuda a otros gamers a descubrir joyas ocultas.</li>
+                        <li>Comparte tu experiencia con la comunidad.</li>
+                        <li>Contribuye a nuestro catálogo de reseñas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>© 2025 GAMEHUB. Todos los derechos reservados.</footer>
+    <script src="scripts/recomendaciones.js"></script>
+</body>
+</html>

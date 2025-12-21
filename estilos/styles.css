@@ -481,3 +481,18 @@ footer{
         height: 200px;
     }
 }
+/* --- ESTILOS PARA LOS LINKS DE CONTACTO --- */
+
+.reasons-list li a {
+    color: #c1bcc6; /* Color base (gris claro) */
+    text-decoration: none; /* Quitamos el subrayado típico */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block; /* Para que la animación funcione mejor */
+}
+
+.reasons-list li a:hover {
+    color: #ff00cc; /* Color rosa neón al tocar */
+    text-shadow: 0 0 10px rgba(255, 0, 204, 0.6); /* Brillo */
+    transform: translateX(5px); /* Pequeño movimiento a la derecha */
+}

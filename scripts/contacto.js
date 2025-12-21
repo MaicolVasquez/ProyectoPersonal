@@ -1,5 +1,3 @@
-// scripts/contacto.js
-
 document.getElementById('formContacto').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que la página se recargue
 

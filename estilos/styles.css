@@ -39,20 +39,6 @@ nav ul li a:hover {
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-.bienv{
-  font-size: 80px;
-}
-.text-bienv{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px;
-  margin: 35px;
-}
-.imagenbv{
-    width: 400px;
-}
 main {
   flex: 1; 
   display: flex;

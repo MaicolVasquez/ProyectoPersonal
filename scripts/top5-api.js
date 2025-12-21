@@ -1,12 +1,9 @@
 const container = document.getElementById('top5-container');
 
-// 1. TU CLAVE DE API (Déjala así si usas el respaldo)
 const apiKey = 'TU_CLAVE_AQUI'; 
 
 const url = `https://api.rawg.io/api/games?key=${apiKey}&dates=2023-01-01,2024-12-31&ordering=-added&page_size=5`;
 
-// 2. DATOS DE RESPALDO CON IMÁGENES SEGURAS (Steam CDN)
-// He cambiado las URLs por las oficiales de Steam que son muy estables.
 const juegosRespaldo = [
     {
         id: 3328,
@@ -51,7 +48,6 @@ const juegosRespaldo = [
     }
 ];
 
-// URL de una imagen por defecto por si TODO falla (un mando de consola neón)
 const imagenPorDefecto = "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1000&auto=format&fit=crop";
 
 async function cargarTop5() {
@@ -81,8 +77,6 @@ function mostrarJuegos(listaJuegos) {
 
         const rating = juego.rating ? juego.rating : "N/A";
 
-        // AQUÍ ESTÁ EL TRUCO: añadimos onerror="..." a la imagen
-        // Si la imagen falla al cargar, se cambia sola por la 'imagenPorDefecto'
         const tarjetaHTML = `
             <div class="top-card">
                 <div class="img-container">
@@ -111,7 +105,7 @@ function mostrarJuegos(listaJuegos) {
 }
 
 function verDetalles(id) {
-    // Si el ID es menor a 100000 (suele ser manual), buscamos en Google, si no en RAWG
+
     const urlDestino = id < 999999 ? `https://rawg.io/games/${id}` : `https://www.google.com/search?q=${id}`;
     window.open(`https://rawg.io/games/${id}`, '_blank');
 }

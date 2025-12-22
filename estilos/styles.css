@@ -233,33 +233,29 @@ footer{
         order: -1;
     }
 }
-/* --- ESTILOS PARA LAS TARJETAS DE JUEGOS (MIS JUEGOS) --- */
 
-/* Estilo base de la tarjeta */
 .card {
-    background-color: rgba(30, 10, 45, 0.6); /* Fondo oscuro semitransparente */
-    border: 2px solid #3d005a;               /* Borde oscuro inicial */
-    border-radius: 15px;                     /* Bordes redondeados */
+    background-color: rgba(30, 10, 45, 0.6);
+    border: 2px solid #3d005a;
+    border-radius: 15px;
     padding: 15px;
-    transition: all 0.4s ease;               /* Suavizado para la animación */
+    transition: all 0.4s ease;
     position: relative;
-    overflow: hidden;                        /* Para contener el brillo */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* EFECTO AL PASAR EL MOUSE (HOVER) */
 .card:hover {
-    transform: translateY(-10px) scale(1.02); /* Se levanta y crece un poco */
-    border-color: #b56aff;                    /* El borde se vuelve brillante */
-    box-shadow: 0 0 20px rgba(181, 106, 255, 0.4), /* Brillo exterior */
-                inset 0 0 20px rgba(181, 106, 255, 0.1); /* Brillo interior */
-    background-color: rgba(61, 0, 90, 0.5);   /* El fondo se aclara ligeramente */
-    z-index: 10;                              /* Asegura que quede por encima */
+    transform: translateY(-10px) scale(1.02);
+    border-color: #b56aff;
+    box-shadow: 0 0 20px rgba(181, 106, 255, 0.4),
+                inset 0 0 20px rgba(181, 106, 255, 0.1);
+    background-color: rgba(61, 0, 90, 0.5);
+    z-index: 10;
 }
 
-/* Mejora para las etiquetas (tags) */
 .tags {
     margin-top: 15px;
     display: flex;
@@ -278,29 +274,25 @@ footer{
     transition: 0.3s;
 }
 
-/* Las etiquetas también brillan al tocar la tarjeta */
 .card:hover .tag {
     border-color: #ff00cc;
     color: #fff;
     box-shadow: 0 0 5px #ff00cc;
 }
 
-/* Ajuste de la imagen para que encaje perfecto en la tarjeta */
 .card-img {
-    width: 100%;       /* Ocupa todo el ancho disponible */
-    height: 180px;     /* Altura fija para uniformidad */
-    object-fit: cover; /* Recorta la imagen sin deformarla */
-    border: none;      /* Quitamos el borde antiguo de la imagen */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: none;
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.4s ease;
 }
 
-/* Efecto extra: la imagen se acerca un poco */
 .card:hover .card-img {
     transform: scale(1.05);
 }
-/* --- ESTILOS EXCLUSIVOS PARA TOP 5 (Diseño Horizontal) --- */
 
 .top-header {
     padding: 40px 20px 20px;
@@ -310,7 +302,7 @@ footer{
 }
 
 .top-title {
-    color: #ffcc00; /* Amarillo/Dorado como en la imagen */
+    color: #ffcc00;
     font-size: 28px;
     margin-bottom: 10px;
 }
@@ -329,14 +321,13 @@ footer{
     gap: 30px;
 }
 
-/* Tarjeta contenedora horizontal */
 .top-card {
-    display: flex; /* Esto hace que imagen y texto estén lado a lado */
+    display: flex;
     background-color: rgba(30, 10, 45, 0.8);
     border: 1px solid #5a2d85;
     border-radius: 16px;
     overflow: hidden;
-    height: 300px; /* Altura fija para uniformidad */
+    height: 300px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -347,9 +338,8 @@ footer{
     border-color: #b56aff;
 }
 
-/* Sección Izquierda: Imagen y Círculo */
 .img-container {
-    width: 45%; /* La imagen ocupa el 45% del ancho */
+    width: 45%;
     position: relative;
     overflow: hidden;
 }
@@ -357,7 +347,7 @@ footer{
 .top-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen llene el espacio sin estirarse */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -365,7 +355,6 @@ footer{
     transform: scale(1.05);
 }
 
-/* El círculo del ranking */
 .rank-circle {
     position: absolute;
     top: 20px;
@@ -373,7 +362,7 @@ footer{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ffaa00, #ff6600); /* Naranja degradado */
+    background: linear-gradient(135deg, #ffaa00, #ff6600);
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -384,17 +373,15 @@ footer{
     z-index: 10;
 }
 
-/* Colores específicos para 1, 2 y 3 */
 .rank-circle.silver { background: linear-gradient(135deg, #e0e0e0, #999); color: #333; }
 .rank-circle.bronze { background: linear-gradient(135deg, #cd7f32, #8b4513); }
 
-/* Sección Derecha: Contenido */
 .content-container {
-    width: 55%; /* El texto ocupa el resto */
+    width: 55%;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empuja el botón al final */
+    justify-content: space-between;
 }
 
 .info-top h3 {
@@ -433,13 +420,12 @@ footer{
     margin: 0;
 }
 
-/* Botón grande degradado */
 .btn-more {
     display: block;
     width: 80%;
     padding: 15px;
     text-align: center;
-    background: linear-gradient(90deg, #b56aff, #ff00cc); /* Degradado rosa/morado */
+    background: linear-gradient(90deg, #b56aff, #ff00cc);
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -454,10 +440,9 @@ footer{
     box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
 }
 
-/* RESPONSIVE: Para celulares */
 @media (max-width: 768px) {
     .top-card {
-        flex-direction: column; /* Cambia a vertical en celulares */
+        flex-direction: column;
         height: auto;
     }
     .img-container, .content-container {
@@ -467,22 +452,20 @@ footer{
         height: 200px;
     }
 }
-/* --- ESTILOS PARA LOS LINKS DE CONTACTO --- */
 
 .reasons-list li a {
-    color: #c1bcc6; /* Color base (gris claro) */
-    text-decoration: none; /* Quitamos el subrayado típico */
+    color: #c1bcc6;
+    text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    display: inline-block; /* Para que la animación funcione mejor */
+    display: inline-block;
 }
 
 .reasons-list li a:hover {
-    color: #ff00cc; /* Color rosa neón al tocar */
-    text-shadow: 0 0 10px rgba(255, 0, 204, 0.6); /* Brillo */
-    transform: translateX(5px); /* Pequeño movimiento a la derecha */
+    color: #ff00cc;
+    text-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
+    transform: translateX(5px);
 }
-/* --- DISEÑO DE PORTADA (HERO SECTION) --- */
 
 .hero-section {
     display: flex;
@@ -491,12 +474,11 @@ footer{
     padding: 60px 80px;
     max-width: 1400px;
     margin: 0 auto;
-    min-height: 70vh; /* Ocupa buena parte de la pantalla */
+    min-height: 70vh;
     position: relative;
     overflow: hidden;
 }
 
-/* --- LADO IZQUIERDO: TEXTO --- */
 .hero-content {
     flex: 1;
     z-index: 2;
@@ -526,7 +508,7 @@ footer{
     background: linear-gradient(90deg, #b56aff, #00d4ff);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* Texto con degradado */
+    color: transparent;
 }
 
 .hero-description {
@@ -537,7 +519,6 @@ footer{
     max-width: 500px;
 }
 
-/* Botones de acción */
 .hero-buttons {
     display: flex;
     gap: 20px;
@@ -547,7 +528,7 @@ footer{
     background: linear-gradient(90deg, #ff00cc, #b56aff);
     color: white;
     padding: 15px 35px;
-    border-radius: 50px; /* Botón redondo */
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
@@ -568,7 +549,7 @@ footer{
 }
 
 .btn-primary:hover {
-    transform: translateY(-5px); /* Se eleva al pasar mouse */
+    transform: translateY(-5px);
     box-shadow: 0 0 40px rgba(255, 0, 204, 0.6);
 }
 
@@ -578,7 +559,6 @@ footer{
     color: #ff00cc;
 }
 
-/* --- LADO DERECHO: VISUAL --- */
 .hero-visual {
     flex: 1;
     position: relative;
@@ -587,7 +567,6 @@ footer{
     align-items: center;
 }
 
-/* Círculo brillante detrás de la imagen */
 .glowing-circle {
     position: absolute;
     width: 400px;
@@ -602,14 +581,11 @@ footer{
     max-width: 550px;
     z-index: 2;
     border-radius: 20px;
-    /* Efecto de máscara para que se funda un poco con el fondo si quieres, 
-       o borde neón */
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     animation: float 6s ease-in-out infinite;
 }
 
-/* --- BARRA DE CARACTERÍSTICAS (FEATURES) --- */
 .features-bar {
     display: flex;
     justify-content: center;
@@ -618,7 +594,7 @@ footer{
     background: rgba(61, 0, 90, 0.2);
     border-top: 1px solid #3d005a;
     backdrop-filter: blur(10px);
-    margin-top: -50px; /* Para que se solape un poco si se desea, o 0 */
+    margin-top: -50px;
     position: relative;
     z-index: 3;
 }
@@ -653,10 +629,9 @@ footer{
     margin: 5px 0 0 0;
 }
 
-/* --- ANIMACIONES --- */
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); } /* Flota hacia arriba */
+    50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
 
@@ -667,7 +642,7 @@ footer{
 
 @media (max-width: 900px) {
     .hero-section {
-        flex-direction: column-reverse; /* Imagen arriba, texto abajo en móviles */
+        flex-direction: column-reverse;
         padding: 40px 20px;
         text-align: center;
     }
@@ -690,19 +665,18 @@ footer{
     font-family: 'Orbitron', sans-serif;
     font-size: 28px;
     font-weight: 900;
-    color: #ffffff; /* "Game" será Blanco puro */
-    /* Quitamos el background y el text-fill-color antiguos para que no interfieran */
+    color: #ffffff;
     background: none; 
     -webkit-text-fill-color: initial;
 }
 
 .logo span {
-    color: #9d50ff; /* "Hub" será Morado (Color exacto de tu imagen) */
+    color: #9d50ff;
 }
-/* --- ESTILO PARA LA SECCIÓN ACTIVA (HEADER) --- */
+
 nav ul li a.active {
-    color: #ffffff; /* Texto blanco puro */
-    text-shadow: 0 0 15px #b56aff; /* Resplandor morado intenso */
-    border-bottom: 2px solid #ff00cc; /* Línea rosa neón abajo */
-    padding-bottom: 5px; /* Espacio para que la línea no pegue con el texto */
+    color: #ffffff;
+    text-shadow: 0 0 15px #b56aff;
+    border-bottom: 2px solid #ff00cc;
+    padding-bottom: 5px;
 }
